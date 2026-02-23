@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+
+<div class="sidebar">
+    <h2>CampusConnect</h2>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/profile">Profile</a>
+    <a href="/alumni">Alumni</a>
+    <a href="/mentorship">Mentorship</a>
+    <a href="/jobs">Jobs</a>
+</div>
+
+<div class="main-content">
+
+    <div class="top-bar">
+        <div>
+            <h2 id="welcome"></h2>
+            <p id="role"></p>
+        </div>
+        <button class="logout-btn"
+                onclick="window.location.href='/logout'">
+            Logout
+        </button>
+    </div>
+
+    <div class="card-column">
+
+        <div class="color-card profile-card"
+             onclick="window.location.href='/profile'">
+            <div class="card-content">
+                <span class="card-icon">👤</span>
+                <div>
+                    <h3>My Profile</h3>
+                    <p>View and manage your profile</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="color-card alumni-card"
+             onclick="window.location.href='/alumni'">
+            <div class="card-content">
+                <span class="card-icon">🤝</span>
+                <div>
+                    <h3>Alumni Directory</h3>
+                    <p>Connect with alumni network</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="color-card mentor-card"
+             onclick="window.location.href='/mentorship'">
+            <div class="card-content">
+                <span class="card-icon">📩</span>
+                <div>
+                    <h3>Mentorship</h3>
+                    <p>Send and track mentorship requests</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="color-card jobs-card"
+             onclick="window.location.href='/jobs'">
+            <div class="card-content">
+                <span class="card-icon">💼</span>
+                <div>
+                    <h3>Job Opportunities</h3>
+                    <p>Explore career openings</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
