@@ -74,8 +74,3 @@ if (loginForm) {
             alert("Server error. Try again.");
         }
     });
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 113d686ab5ab43acccdf310bf597f15fbe059d72
