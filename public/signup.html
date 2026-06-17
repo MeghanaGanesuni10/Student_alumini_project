@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup - CampusConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+
+<div class="auth-container">
+    <h2>🎓 CampusConnect</h2>
+    <p>Create your account to get started</p>
+
+    <form id="signupForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="password" id="password" placeholder="Create password" required>
+
+        <select id="role" required>
+            <option value="">Select Role</option>
+            <option value="student">Student</option>
+            <option value="alumni">Alumni</option>
+        </select>
+
+        <button type="submit" class="auth-btn">Signup</button>
+    </form>
+
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+
+<div class="sidebar">
+    <h2>🎓 CampusConnect</h2>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/profile">Profile</a>
+    <a href="/alumni">Alumni</a>
+    <a href="/mentorship">Mentorship</a>
+    <a href="/jobs">Jobs</a>
+</div>
+
+<div class="main-content">
+
+    <div class="page-header profile-header">
+        <h2>👤 My Profile</h2>
+        <p>Manage your personal details</p>
+    </div>
+
+    <div class="profile-card">
+        <div class="avatar" id="avatar"></div>
+
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Role:</strong> <span id="role"></span></p>
+
+        <button class="logout-btn"
+                onclick="window.location.href='/logout'">
+            Logout
+        </button>
+    </div>
+
+</div>
+
+<script>
+fetch('/api/user')
+.then(res => res.json())
+.then(data => {
+    if (data.success) {
+        document.getElementById("name").innerText = data.user.name;
+        document.getElementById("email").innerText = data.user.email;
+        document.getElementById("role").innerText = data.user.role;
+        document.getElementById("avatar").innerText =
+            data.user.name.charAt(0).toUpperCase();
+    }
+});
+</script>
+
+</body>
+</html>
