@@ -74,3 +74,4 @@ if (loginForm) {
             alert("Server error. Try again.");
         }
     });
+}
